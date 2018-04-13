@@ -21,33 +21,30 @@ var
   paths = {
 
     style: {
-      src: './joint/static/css',
-      location: './joint/dev/less/style.less',
+      src: './deploy/css',
+      location: './dev/less/style.less',
       watch: [
-          './joint/dev/less/*.less',
-          './joint/dev/less/_*/*.less',
-          './joint/dev/less/_*/**/*.less',
+          './dev/less/*.less'
       ],
-      entryPoint: './joint/static/css/style.css',
-      destination: './joint/static/css'
+      entryPoint: './deploy/css/style.css',
+      destination: './deploy/css'
     },
 
     pug: {
-			pages: './joint/dev/pug/pages/*.pug',
-			watch: ['./joint/dev/pug/blocks/**/*.pug',
-							'./joint/dev/pug/pages/**/*.pug',
-							'./joint/dev/pug/layouts/**/*.pug',
-							'./joint/dev/pug/icons/**/*.pug',
-							'./joint/dev/pug/mixins.pug'],
-			convertFolder: './joint/templates'
+			pages: './dev/pug/pages/*.pug',
+			watch: ['./dev/pug/blocks/**/*.pug',
+							'./dev/pug/pages/**/*.pug',
+							'./dev/pug/layouts/**/*.pug',
+							'./dev/pug/icons/**/*.pug'],
+			convertFolder: './deploy'
 		},
 
     js: {
-    	files: './joint/dev/js/modules/*.js',
-    	libs: './joint/dev/js/libs/*.js',
-    	run: './joint/dev/js/run.js',
-    	watch: ['./joint/dev/js/**/*.js'],
-    	convertFolder: './joint/static/js'
+    	files: './dev/js/modules/*.js',
+    	libs: './dev/js/libs/*.js',
+    	run: './dev/js/run.js',
+    	watch: ['./dev/js/**/*.js'],
+    	convertFolder: './deploy/js'
     }
   };
 
