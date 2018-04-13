@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru" prefix="og: http://ogp.me/ns#")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width")
+
+		link(rel="shortcut icon", href="favicon.png", type="image/x-icon")
+		link(rel="icon", href="favicon.png", type="image/x-icon")
+
+		link(rel="stylesheet", href="/static/css/style.min.css")
+
+		meta(property="og:url" content="")
+		meta(property="og:title" content="Сайт-резюме")
+		meta(property="og:description" content="Описание")
+		meta(property="og:image" content="")
+		meta(property="og:type" content="website")
+		meta(property="og:site_name" content="")
+		meta(property="og:locale" content="ru_RU")
+
+		meta(property="url" content="")
+		meta(property="title" content="")
+		meta(property="description" content="")
+		meta(property="image" content="")
+
+		block seo
+
+	body
+		block main-content
+		include ../blocks/js-common
