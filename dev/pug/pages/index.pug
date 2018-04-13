@@ -1,0 +1,42 @@
+extends ../layouts/base
+
+block seo
+	title Заголовок
+	meta(name="description" content="")
+
+block main-content
+	section.main-screen
+		.main-screen__topper
+			.main-screen__wrap.main-screen__wrap--flex
+				nav.main-screen__nav
+					ul
+						li
+							a(href="#") Главная
+						li
+							a(href="#") О себе
+						li
+							a(href="#") Навыки
+						li
+							a(href="#") Опыт
+						li
+							a(href="#") Портфолио
+						li
+							a(href="#") Контакты
+
+				.main-screen__tel
+					a(href="tel:89992390940")
+						| +7 999 239-09-40
+
+
+		.main-screen__img
+
+		.main-screen__wrap
+			article.main-screen__info
+				h1.main-screen__title
+					| Антон Немцев
+
+				p.main-screen__descr
+					| Front-end разработчик, который любит развитие, ответственные дела и игры 
+
+				a.block-btn.block-btn--akcent(href="#contants")
+					| Связаться со мной

@@ -1,0 +1,221 @@
+.wrap {
+	display: block;
+	position: relative;
+
+	box-sizing: border-box;
+
+	max-width: 960px;
+	margin: 0 auto;
+	.aside-padding;
+}
+
+.title {
+	display: block;
+	.margin-bottom(2);
+
+	text-align: center;
+	.xl-text;
+	font-weight: bold;
+}
+
+.padding-top(@mod: 1) {
+	padding-top: @dStep * @mod;
+
+	@media @bigScreen {
+		padding-top: @bStep * @mod;
+	}
+
+	@media @tablet {
+		padding-top: @tStep * @mod;
+	}
+
+	@media @mobileSm {
+		padding-top: @mStep * @mod;
+	}
+}
+
+.padding-bottom(@mod: 1) {
+	padding-bottom: @dStep * @mod;
+
+	@media @bigScreen {
+		padding-bottom: @bStep * @mod;
+	}
+
+	@media @tablet {
+		padding-bottom: @tStep * @mod;
+	}
+
+	@media @mobileSm {
+		padding-bottom: @mStep * @mod;
+	}
+}
+
+.aside-padding(@lmod: 1, @rmod: 1) {
+	padding-left: 25px * @lmod;
+	padding-right: 25px * @rmod;
+
+	@media @mobile {
+		padding-left: 15px * @lmod;
+		padding-right: 15px * @rmod;
+	}
+}
+
+.margin-bottom(@mod: 1) {
+	margin-bottom: @dStep * @mod;
+
+	@media @bigScreen {
+		margin-bottom: @bStep * @mod;
+	}
+
+	@media @tablet {
+		margin-bottom: @tStep * @mod;
+	}
+
+	@media @mobileSm {
+		margin-bottom: @mStep * @mod;
+	}
+}
+
+.margin-top(@mod: 1) {
+	margin-top: @dStep * @mod;
+
+	@media @bigScreen {
+		margin-top: @bStep * @mod;
+	}
+
+	@media @tablet {
+		margin-top: @tStep * @mod;
+	}
+
+	@media @mobileSm {
+		margin-top: @mStep * @mod;
+	}
+}
+
+.xl-text {
+	font-size: 70px;
+	line-height: 70px;
+
+	@media @bigScreen {
+		font-size: 80px;
+		line-height: 80px;
+	}
+
+	@media @tablet {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	@media @mobileSm {
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+
+.big-text {
+	font-size: @dStep;
+	line-height: @dStep;
+
+	@media @bigScreen {
+		font-size: @bStep - 4;
+		line-height: @bStep;
+	}
+
+	@media @tablet {
+		font-size: @tStep;
+		line-height: @tStep;
+	}
+
+	@media @mobileSm {
+		font-size: @mStep;
+		line-height: @mStep;
+	}
+}
+
+.middle-text {
+	font-size: @dStep - 6;
+	line-height: @dStep;
+
+	@media @bigScreen {
+		font-size: @bStep - 6;
+		line-height: @bStep;
+	}
+
+	@media @tablet {
+		font-size: @tStep - 6;
+		line-height: @tStep;
+	}
+
+	@media @mobileSm {
+		font-size: @mStep - 4;
+		line-height: @mStep;
+	}
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	@media @tablet {
+		justify-content: flex-end;
+	}
+}
+
+.grid-item(@size) {
+	box-sizing: border-box;
+	flex: 0 0 @size;
+
+	@media @tablet {
+		flex: 0 0 50%;
+	}
+
+	@media @mobile {
+		flex: 0 0 100%;
+	}
+}
+
+.half-height {
+	height: 50vh;
+	.min-height;
+
+	@media @bigScreen {
+		min-height: 360px;
+	}
+
+	@media @tablet {
+		height: auto;
+	}
+}
+
+.min-height {
+	min-height: 315px;
+
+	@media @tablet {
+		min-height: 260px;
+	}
+
+	@media @mobile {
+		min-height: 240px;
+	}
+
+	@media @mobileSm {
+		min-height: 200px;
+	}
+}
+
+.akcent-underline(@mt: 20px, @h: 15px) {
+	span::after {
+		content: "";
+
+		display: block;
+		width: 100%;
+		height: @h;
+
+		background-color: @altAkcentOpacityColor;
+		margin-top: @mt;
+
+		@media @mobile {
+			display: none;
+		}
+	}
+}

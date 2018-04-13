@@ -1,0 +1,85 @@
+.block-btn {
+	display: inline-block;
+
+	padding: 15px 30px;
+
+	text-align: center;
+	letter-spacing: 1px;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: @altAkcentColor;
+
+	border-radius: 2px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	transition: .4s ease-out;
+
+	@media @bigScreen {
+		padding: 20px 35px;
+	}
+
+	@media @tablet {
+		padding: 15px 25px;
+	}
+
+	&--small {
+		padding: 10px 30px;
+		font-size: 16px;
+		line-height: 20px;
+
+		@media @bigScreen {
+			padding: 15px 35px;
+			font-size: 18px;
+		}
+	}
+
+	&--blue {
+		background-color: @altAkcentColor;
+		color: @altTextColor;
+		box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.225);
+
+		span::after {
+			background-color: @altTextColor;
+		}
+
+		&:hover {
+			box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.225);
+			background-color: lighten(@altAkcentColor, 6%);
+		}
+	}
+
+	&--akcent {
+		text-decoration: none;
+		
+		background-color: @akcentColor;
+		color: @altTextColor;
+		box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.225);
+
+		span::after {
+			background-color: @altTextColor;
+		}
+
+		&:hover {
+			box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.225);
+			background-color: lighten(@akcentColor, 6%);
+		}
+	}
+
+	&--dark {
+		background-color: @textColor;
+		color: @altTextColor;
+		box-shadow: 0 3px 5px 0 rgba(0,0,0,0.225);
+
+		span::after {
+			background-color: @altTextColor;
+		}
+
+		&:hover {
+			box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.225);
+			background-color: darken(@textColor, 6%);
+		}
+	}
+}
