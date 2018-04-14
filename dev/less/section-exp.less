@@ -1,0 +1,30 @@
+.section-exp {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&__item {
+		display: block;
+		flex: 0 0 430px;
+
+		.margin-bottom(2);
+	}
+
+	&__item-title {
+		display: block;
+
+		.middle-text;
+
+		.margin-bottom;
+	}
+
+	&__item-dates {
+		display: block;
+		.margin-bottom;
+		color: @greyText;
+	}
+
+	&__item-descr {
+		display: block;
+	}
+}
