@@ -1,0 +1,37 @@
+.block-form {
+	text-align: center;
+
+	&__cta {
+		display: block;
+
+		.middle-text;
+		.margin-bottom;
+	}
+
+	&__input {
+		display: inline-block;
+
+		width: 280px;
+		box-sizing: border-box;
+		padding: 15px 25px;
+
+		border: 2px solid @textColor;
+
+		outline: none;
+
+		margin-right: 30px;
+
+		transition: .3s;
+
+		&:focus {
+			background-color: @altTextColor;
+		}
+
+		&::placeholder {
+			color: @textColor;
+			font-family: inherit;
+			font-size: inherit;
+			line-height: 20px;
+		}
+	}
+}
