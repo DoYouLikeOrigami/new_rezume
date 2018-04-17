@@ -14,6 +14,11 @@
 		border-radius: 10px;
 
 		.margin-bottom(2);
+
+		@media @mobile {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 
 	&__item-img {
@@ -24,6 +29,19 @@
 		border-radius: 10px;
 		overflow: hidden;
 
+		@media @tablet {
+			flex: 0 0 35%;
+		}
+
+		@media @mobile {
+			flex: 0 0 280px;
+			.margin-bottom;
+		}
+
+		@media @mobileSm {
+			flex: 1 1 100%;
+		}
+
 		img {
 			display: block;
 			position: absolute;
@@ -33,6 +51,14 @@
 
 			min-height: 100%;
 			width: auto;
+
+			@media @mobile {
+				position: relative;
+
+				width: 100%;
+				height: auto;
+				min-height: 0;
+			}
 		}
 	}
 
@@ -42,6 +68,15 @@
 
 		box-sizing: border-box;
 		padding: 15px 0 15px 15px;
+
+		@media @tablet {
+			flex: 0 0 60%;
+			padding: 0;
+		}
+
+		@media @mobile {
+			flex: 1 1 100%;
+		}
 	}
 
 	&__item-title {

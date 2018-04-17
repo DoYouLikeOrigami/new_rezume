@@ -2,6 +2,11 @@
 	display: flex;
 	justify-content: space-between;
 
+	@media @tablet {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
 	&__img {
 		display: block;
 
@@ -10,6 +15,10 @@
 
 		border-radius: 10px;
 		overflow: hidden;
+
+		@media @tablet {
+			.margin-bottom;
+		} 
 
 		img {
 			display: block;
@@ -20,6 +29,10 @@
 	&__text {
 		display: block;
 		flex: 0 0 600px;
+
+		@media @tablet {
+			flex: 1 1 100%;
+		}
 
 		p {
 			.margin-bottom(.5);
