@@ -2,57 +2,10 @@
 	display: block;
 	position: relative;
 
+	margin-top: 60px; // main-topper offset
+
 	&__wrap {
 		.wrap;
-
-		&--flex {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-	}
-
-	&__topper {
-		display: block;
-	}
-
-	&__nav {
-		display: block;
-
-		ul {
-			display: flex;
-		}
-
-		li {
-			display: inline-block;
-
-			& > a {
-				display: block;
-				padding: 20px;
-
-				text-decoration: none;
-				color: inherit;
-				font-size: 16px;
-				line-height: 20px;
-
-				transition: .3s;
-
-				&:hover {
-					background-color: @altAkcentOpacityColor;
-				}
-			}
-		}
-	}
-
-	&__tel {
-		display: block;
-
-		a {
-			.middle-text;
-			color: inherit;
-			font-weight: bold;
-			text-decoration: none;
-		}
 	}
 
 	&__img {

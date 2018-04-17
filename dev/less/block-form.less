@@ -15,6 +15,8 @@
 		box-sizing: border-box;
 		padding: 15px 25px;
 
+		font-size: inherit;
+
 		border: 2px solid @textColor;
 
 		outline: none;
@@ -23,8 +25,9 @@
 
 		transition: .3s;
 
-		&:focus {
-			background-color: @altTextColor;
+		&:focus,
+		&:hover {
+			border-color: @akcentColor;
 		}
 
 		&::placeholder {
