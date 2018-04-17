@@ -5,29 +5,27 @@ block seo
 	meta(name="description" content="")
 
 block main-content
+	.main-topper
+		.main-topper__wrap
+			nav.main-topper__nav
+				ul
+					li
+						a(href="#about") Эбаут
+					li
+						a(href="#skills") Навыки
+					li
+						a(href="#exp") Опыт
+					li
+						a(href="#portfolio") Портфолио
+					li
+						a(href="#contacts") Контакты
+
+			.main-topper__tel
+				a(href="tel:89992390940")
+					| +7 999 239-09-40
+
+
 	section.main-screen
-		.main-screen__topper
-			.main-screen__wrap.main-screen__wrap--flex
-				nav.main-screen__nav
-					ul
-						li
-							a(href="#") Главная
-						li
-							a(href="#") О себе
-						li
-							a(href="#") Навыки
-						li
-							a(href="#") Опыт
-						li
-							a(href="#") Портфолио
-						li
-							a(href="#") Контакты
-
-				.main-screen__tel
-					a(href="tel:89992390940")
-						| +7 999 239-09-40
-
-
 		.main-screen__img
 
 		.main-screen__wrap
@@ -42,20 +40,25 @@ block main-content
 					| Связаться со мной
 	
 
-	section.block-section
+	section.block-section#about
 		.block-section__wrap
 			h2.block-section__title
-				| О себе
+				| Эбаут
 
 			.section-about
 				.section-about__img
 					img(src="img/about.jpg" alt="Моё фото")
 				.section-about__text
-					p текст о себе
-					p текст о себе
+					p Привет! О&nbsp;опыте и&nbsp;способностях написано ниже, здесь расскажу о&nbsp;ценностях и&nbsp;интересах. Их&nbsp;три группы: развитие, ответственные дела и&nbsp;игры.
+
+					p Развитие мотивирует постояно двигаться вперёд. Обожаю перенимать опыт и&nbsp;знания от&nbsp;курсов, других людей и&nbsp;жизни. Кроме профессионального обучения, о&nbsp;котором ниже, развиваюсь в&nbsp;областях ораторского искусства, переговоров, менеджмента, гейм-дизайна, маркетинга и&nbsp;копирайтинга. Потому&nbsp;что нравится.
+
+					p Ответственные дела поддерживают тонус. Знание, что&nbsp;другие на&nbsp;тебя рассчитывают, отлично мотивирует. Поэтому постоянно где-нибудь участвую.
+
+					p Игры в&nbsp;широком смысле воспринимаю как&nbsp;искусство. Люблю играть, придумывать игры и&nbsp;встраивать&nbsp;их в&nbsp;различные виды деятельности. Например, образование или&nbsp;публичные выступления. Сейчас погружаюсь в&nbsp;разработку компьютерных игр, поэтому ищу места, где&nbsp;получу соответствующий опыт и&nbsp;буду полезен.
 
 
-	section.block-section.block-section--small-pb
+	section.block-section.block-section--small-pb#skills
 		.block-section__wrap
 			h3.block-section__title
 				| Навыки
@@ -63,99 +66,109 @@ block main-content
 			.section-skills
 				article.section-skills__item
 					h4.section-skills__item-title
-						| Название навыка
+						| Вёрстка
 					ul.section-skills__item-descr
-						li Описание
-						li Описание
-						li Описание
-						li Описание
+						li Валидный&nbsp;HTML5 по&nbsp;#[a(href="https://validator.w3.org" target="_blank") W3C]
+						li Адаптивность для&nbsp;4 размеров экрана
+						li Кросс-браузерность от&nbsp;Edge (по&nbsp;необходимости IE8+)
+						li БЭМ&nbsp;именование классов
 
 				article.section-skills__item
 					h4.section-skills__item-title
-						| Название навыка
+						| JavaScript
 					ul.section-skills__item-descr
-						li Описание
-						li Описание
-						li Описание
-						li Описание
+						li Нативный&nbsp;JS с&nbsp;библиотеками по&nbsp;необходимости
+						li Классы на&nbsp;прототипах
+						li Распределение кода на&nbsp;модули
 
 				article.section-skills__item
 					h4.section-skills__item-title
-						| Название навыка
+						| Workflow
 					ul.section-skills__item-descr
-						li Описание
-						li Описание
-						li Описание
-						li Описание
+						li Ведение проектов в&nbsp;Git
+						li Сборка в&nbsp;Gulp
+						li Препроцессоры Less и&nbsp;Pug
+						li Контроль задач в&nbsp;Asana или&nbsp;Trello
 
 				article.section-skills__item
 					h4.section-skills__item-title
-						| Название навыка
+						| Работа в команде
 					ul.section-skills__item-descr
-						li Описание
-						li Описание
-						li Описание
-						li Описание
+						li Писал код совместно с&nbsp;другими в&nbsp;git коллаборации
+						li Курировал проекты: отвечал перед заказчиком и&nbsp;координировал команду
 
 				article.section-skills__item
 					h4.section-skills__item-title
-						| Название навыка
+						| Поддержка кода
 					ul.section-skills__item-descr
-						li Описание
-						li Описание
-						li Описание
-						li Описание
-
-				article.section-skills__item
-					h4.section-skills__item-title
-						| Название навыка
-					ul.section-skills__item-descr
-						li Описание
-						li Описание
-						li Описание
-						li Описание
+						li Подключался к&nbsp;работающим проектам и&nbsp;развивал&nbsp;их
+						li Создавал проекты с&nbsp;нуля и&nbsp;поддерживал несколько лет
 
 
-	section.block-section.block-section--small-pb
+	section.block-section.block-section--small-pb#exp
 		.block-section__wrap
 			h3.block-section__title
-				| Места работы и учёбы
+				| Опыт
 
 			.section-exp
 				article.section-exp__item
 					h6.section-exp__item-title
-						| Место работы
+						| Университет ИТМО
 					p.section-exp__item-dates
-						| Январь 2016 - Март 2017
-					p.section-exp__item-descr
-						| Описание места работы 
+						| Сентябрь 2014 – Июнь 2018
+					.section-exp__item-descr
+						p Специальность «Интеллектуальные технологии в&nbsp;гуманитарной сфере». Связь между названием и&nbsp;содержанием незначительная. 
+						p Наиболее полезными оказались полученные контакты и&nbsp;возможности: мероприятия и&nbsp;круг общения. Хотя пригодились и&nbsp;знания по&nbsp;MySQL, PHP, шаблону MVC и&nbsp;фреймворку Django.
 
 				article.section-exp__item
 					h6.section-exp__item-title
-						| Место работы
+						| Технический специалист
 					p.section-exp__item-dates
-						| Январь 2016 - Март 2017
-					p.section-exp__item-descr
-						| Описание места работы 
+						| Август 2015 – Июль 2016
+					.section-exp__item-descr
+						p В компании «Мастерская оратора». Маленькая организация с&nbsp;атмосферой стартапа. Занимался не&nbsp;только техническими задачами. Есть поводы для&nbsp;гордости:
+						ul
+							li В&nbsp;2&nbsp;раза оптимизировал рекламный бюджет
+							li Организовал ораторский клуб, который в итоге собирался 2&nbsp;раза в&nbsp;месяц в&nbsp;составе от&nbsp;15&nbsp;человек
+							li Создал развлекательную программу для&nbsp;выездных мероприятий, которая используется до&nbsp;сих&nbsp;пор
 
 				article.section-exp__item
 					h6.section-exp__item-title
-						| Место работы
+						| Курс Front-end разработчик
 					p.section-exp__item-dates
-						| Январь 2016 - Март 2017
-					p.section-exp__item-descr
-						| Описание места работы 
+						| Сентябрь 2015 – Ноябрь 2015
+					.section-exp__item-descr
+						p От организации «LoftSchool». Курс оказался настолько полезным, что&nbsp;окупился во&nbsp;время обучения: выполнил заказ на&nbsp;разработку сайта. Получил навыки "здорового" front-end разработчика: чистое написание html и&nbsp;css, workflow git&nbsp;+&nbsp;gulp, модульный подход к&nbsp;написанию JS.
+						p В&nbsp;рамках курса сделал 3&nbsp;проекта: сайт-портфолио, страницу интернет-магазина и&nbsp;командный проект, который в&nbsp;режиме онлайн добавлял watermark на&nbsp;картинку. В&nbsp;последнем кроме написания кода занимался менеджментом проекта. Курс закончил с&nbsp;отличием и&nbsp;горжусь этим.
 
 				article.section-exp__item
 					h6.section-exp__item-title
-						| Место работы
+						| Менеджер проектов
 					p.section-exp__item-dates
-						| Январь 2016 - Март 2017
+						| Август 2016 – Декабрь 2016
+					.section-exp__item-descr
+						p В&nbsp;начинающей веб-студии. Атмосфера стартапа, как&nbsp;и на&nbsp;предыдущем месте работы. Курировал проекты, привлекал клиентов, писал код, нанимал людей на&nbsp;работу и&nbsp;решал другие задачи.
+						p В&nbsp;результате собрал команду из&nbsp;4&nbsp;человек и&nbsp;реализовал около 10&nbsp;проектов различных масштабов. Получил отличный опыт и,&nbsp;можно сказать, стал другим человеком&nbsp;=)
+						p Ушёл спустя полгода в&nbsp;связи с&nbsp;разногласиями в&nbsp;ценностях и&nbsp;взглядах с&nbsp;руководителем.
+
+				article.section-exp__item
+					h6.section-exp__item-title
+						| Руководитель веб-студии
+					p.section-exp__item-dates
+						| Январь 2017 – Март 2018
 					p.section-exp__item-descr
-						| Описание места работы 
+						| Решил организовать собственную веб-студию, благо задачи практически не изменились. В&nbsp;сумме реализовал 7&nbsp;проектов. Увеличил опыт ведения переговоров. И&nbsp;настроил техническую составляющую проектов так, чтобы каждый следующий использовал наработки предыдущего.
+
+				article.section-exp__item
+					h6.section-exp__item-title
+						| Технический специалист
+					p.section-exp__item-dates
+						| Январь 2017 – Март 2018
+					p.section-exp__item-descr
+						| В&nbsp;компании «isWash». Погрузился в бизнес, разработал и&nbsp;продвинул сайт компании в&nbsp;поисковой выдаче Яндекс. Подробности о&nbsp;проекте смотрите в&nbsp;портфолио.
 
 
-	section.block-section.block-section--small-pb.block-section--dark
+	section.block-section.block-section--small-pb.block-section--dark#portfolio
 		.block-section__wrap
 			h2.block-section__title
 				| Портфолио
@@ -163,54 +176,69 @@ block main-content
 			.section-portfolio
 				article.section-portfolio__item
 					.section-portfolio__item-img
-						img(src="img/project-iswash.jpg" alt="Проект iswash" width="200")
+						img(src="img/project-iswash.jpg" alt="Проект iswash")
 
 					.section-portfolio__item-descr
 						h6.section-portfolio__item-title
-							| Заголовок работы
+							| Комплексная разработка сайта
 						.section-portfolio__item-text
-							p Описание работы
-						a.section-portfolio__item-link(href="")
+							p С нуля разработал, поддерживал, продвигал и развивал сайт в течение полутора лет. Всё в текущей версии, включая дизайн и тексты, создано мной.
+
+							p Список выполненных задач:
+
+							ul
+								li Погружение в логику бизнеса и продукта
+								li Составление контента
+								li Разработка дизайна
+								li Вёрстка и шаблонизация содержимого
+								li Посадка на Python Flask
+								li SEO оптимизация текстов
+								li Поддержка и развитие сайта
+
+						a.section-portfolio__item-link(href="#")
 							| Посмотреть проект
 
 				article.section-portfolio__item
 					.section-portfolio__item-img
-						img(src="img/project-iswash.jpg" alt="Проект iswash" width="200")
+						img(src="img/project-timndv.jpg" alt="Проект timndv")
 
 					.section-portfolio__item-descr
 						h6.section-portfolio__item-title
-							| Заголовок работы
+							| Курирование и разработка проекта
 						.section-portfolio__item-text
-							p Описание работы
-						a.section-portfolio__item-link(href="")
+							p Работали над сайтом недвижимости в команде с дизайнером и 2 фрилансерами. Моими задачами в проекте были:
+
+							ul
+								li Согласование всех деталей проекта и бюджета
+								li Составление ТЗ для всех задач
+								li Подбор фрилансеров, которые занимались контентом
+								li Координация работы каждого участника проекта
+								li Вёрстка 4 разделов сайта
+								li Посадка сайта на PHP с MVC подходом
+
+						a.section-portfolio__item-link(href="#")
 							| Посмотреть проект
 
 				article.section-portfolio__item
 					.section-portfolio__item-img
-						img(src="img/project-iswash.jpg" alt="Проект iswash" width="200")
+						img(src="img/project-fedo.jpg" alt="Проект iswash")
 
 					.section-portfolio__item-descr
 						h6.section-portfolio__item-title
-							| Заголовок работы
+							| Курирование и разработка сайта
 						.section-portfolio__item-text
-							p Описание работы
-						a.section-portfolio__item-link(href="")
-							| Посмотреть проект
+							p Сделали в команде с дизайнером. Моими задачами были:
+							ul
+								li Согласование деталей и бюджета проекта
+								li Вёрстка 2 страниц
+								li Программирование калькулятора заказа
+								li Подключение Робокассы
 
-				article.section-portfolio__item
-					.section-portfolio__item-img
-						img(src="img/project-iswash.jpg" alt="Проект iswash" width="200")
-
-					.section-portfolio__item-descr
-						h6.section-portfolio__item-title
-							| Заголовок работы
-						.section-portfolio__item-text
-							p Описание работы
 						a.section-portfolio__item-link(href="")
 							| Посмотреть проект
 
 
-	section.block-section
+	section.block-section#contacts
 		.block-section__wrap
 			h3.block-section__title
 				| Контакты
@@ -225,7 +253,7 @@ block main-content
 				li.section-contacts__item
 					a(href="https://vk.com/origami_biz" target="_blank") vk.com/origami_biz
 
-			form.block-form(method="" action="")
+			form.block-form(method="post" action="/get-rezume.php")
 				p.block-form__cta
 					|	Получите моё резюме на e-mail
 					

@@ -1,14 +1,12 @@
 .section-portfolio {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	display: block;
 
 	&__item {
 		display: flex;
 		justify-content: space-between;
+		align-items: stretch;
 
 		box-sizing: border-box;
-		flex: 0 0 430px;
 
 		padding: 15px;
 
@@ -20,14 +18,21 @@
 
 	&__item-img {
 		display: block;
-		flex: 0 0 50%;
+		position: relative;
+		flex: 0 0 45%;
 
 		border-radius: 10px;
 		overflow: hidden;
 
 		img {
 			display: block;
-			width: 100%;
+			position: absolute;
+
+			left: 0;
+			top: 0;
+
+			min-height: 100%;
+			width: auto;
 		}
 	}
 
@@ -42,7 +47,7 @@
 	&__item-title {
 		display: block;
 		.margin-bottom;
-		font-size: inherit;
+		.middle-text;
 	}
 
 	&__item-text {
@@ -51,13 +56,21 @@
 
 		ul {
 			list-style-type: circle;
-			padding-left: 25px;
+			padding-left: 20px;
 		}
 
-		li, p {
+		ul, p {
 			.margin-bottom(0.5);
 
 			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		li {
+			margin-bottom: 5px;
+
+			&:last-of-type {
 				margin-bottom: 0;
 			}
 		}
