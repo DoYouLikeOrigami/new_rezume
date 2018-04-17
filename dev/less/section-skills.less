@@ -2,6 +2,10 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	@media @tablet {
+		justify-content: space-around;
+	}
+
 	&__item {
 		display: block;
 		flex: 0 0 280px;
@@ -12,6 +16,18 @@
 
 		&:nth-of-type(3n) {
 			margin-right: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@media @tablet {
+			margin-right: 0;
+		}
+
+		@media @mobileSm {
+			flex: 1 1 100%;
 		}
 	}
 

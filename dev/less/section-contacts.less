@@ -4,8 +4,26 @@
 
 	.margin-bottom(3);
 
+	@media @mobile {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
 	&__item {
 		display: block;
+
+		@media @tablet {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+
+		@media @mobile {
+			.margin-bottom;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
 
 		a {
 			text-decoration: none;
