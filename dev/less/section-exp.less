@@ -43,5 +43,26 @@
 			padding-left: 25px;
 			list-style-type: circle;
 		}
+
+		@media @mobile {
+			height: 0;
+			overflow: hidden;
+			transition: .3s;
+		}
+
+		&--mobile-visible {
+			@media @mobile {
+				height: auto;
+				.margin-bottom;
+			}
+		}
+	}
+
+	&__btn {
+		display: none;
+
+		@media @mobile {
+			display: block;
+		}
 	}
 }

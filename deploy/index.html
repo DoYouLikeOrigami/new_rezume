@@ -6,19 +6,19 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.min.css">
-		<meta property="og:url" content="">
-		<meta property="og:title" content="Сайт-резюме">
+		<meta property="og:url" content="http://nemtsev.site">
+		<meta property="og:title" content="Сайт Антона Немцева">
 		<meta property="og:description" content="Описание">
-		<meta property="og:image" content="">
+		<meta property="og:image" content="img/about.jpg">
 		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="">
+		<meta property="og:site_name" content="Сайт Антона Немцева">
 		<meta property="og:locale" content="ru_RU">
-		<meta property="url" content="">
-		<meta property="title" content="">
-		<meta property="description" content="">
-		<meta property="image" content="">
-		<title>Заголовок</title>
-		<meta name="description" content="">
+		<meta property="url" content="http://nemtsev.site">
+		<meta property="title" content="Сайт Антона Немцева">
+		<meta property="description" content="Привет! Здесь актуальная информация про меня как Front-end разработчика">
+		<meta property="image" content="img/about.jpg">
+		<title>Сайт Антона Немцева</title>
+		<meta name="description" content="Привет! Здесь актуальная информация про меня как Front-end разработчика">
 	</head>
 	<body>
 		<div class="main-topper">
@@ -31,7 +31,7 @@
 						<li><a href="#portfolio">Портфолио</a></li>
 						<li><a href="#contacts">Контакты</a></li>
 					</ul>
-				</nav><a class="main-topper__mobile-btn" href="#"><span>1</span><span>2</span><span>3</span></a>
+				</nav><a class="main-topper__mobile-btn js-show-mobile-nav" href="#"><span>1</span><span>2</span><span>3</span></a>
 				<div class="main-topper__tel"><a href="tel:89992390940">+7 999 239-09-40</a></div>
 			</div>
 		</div>
@@ -40,27 +40,29 @@
 			<div class="main-screen__wrap">
 				<article class="main-screen__info">
 					<h1 class="main-screen__title">Антон Немцев</h1>
-					<p class="main-screen__descr">Front-end разработчик, который любит развитие, ответственные дела и игры </p><a class="block-btn block-btn--akcent" href="#contants">Связаться со мной</a>
+					<p class="main-screen__descr">Front-end разработчик, который любит развитие, ответственные дела и игры </p>
+					<div class="main-screen__btns"><a class="block-btn block-btn--akcent js--main-scroll" href="#contacts">Связаться со мной</a><a class="block-btn block-btn--white" href="https://github.com" target="_blank">Смотреть github</a></div>
 				</article>
 			</div>
 		</section>
 		<section class="block-section" id="about">
 			<div class="block-section__wrap">
-				<h2 class="block-section__title">Эбаут</h2>
+				<h2 class="block-section__title"><span>Эбаут</span></h2>
 				<div class="section-about">
 					<div class="section-about__img"><img src="img/about.jpg" alt="Моё фото"></div>
 					<div class="section-about__text">
 						<p>Привет! О&nbsp;опыте и&nbsp;способностях написано ниже, здесь расскажу о&nbsp;ценностях и&nbsp;интересах. Их&nbsp;три группы: развитие, ответственные дела и&nbsp;игры.</p>
 						<p>Развитие мотивирует постояно двигаться вперёд. Обожаю перенимать опыт и&nbsp;знания от&nbsp;курсов, других людей и&nbsp;жизни. Кроме профессионального обучения, о&nbsp;котором ниже, развиваюсь в&nbsp;областях ораторского искусства, переговоров, менеджмента, гейм-дизайна, маркетинга и&nbsp;копирайтинга. Потому&nbsp;что нравится.</p>
 						<p>Ответственные дела поддерживают тонус. Знание, что&nbsp;другие на&nbsp;тебя рассчитывают, отлично мотивирует. Поэтому постоянно где-нибудь участвую.</p>
-						<p>Игры в&nbsp;широком смысле воспринимаю как&nbsp;искусство. Люблю играть, придумывать игры и&nbsp;встраивать&nbsp;их в&nbsp;различные виды деятельности. Например, образование или&nbsp;публичные выступления. Сейчас погружаюсь в&nbsp;разработку компьютерных игр, поэтому ищу места, где&nbsp;получу соответствующий опыт и&nbsp;буду полезен.</p>
+						<p>Игры в&nbsp;широком смысле воспринимаю как&nbsp;искусство. Люблю играть, придумывать игры и&nbsp;встраивать&nbsp;их в&nbsp;различные виды деятельности. Например, образование или&nbsp;публичные выступления. Сейчас погружаюсь в&nbsp;разработку компьютерных игр, поэтому ищу место, где&nbsp;получу соответствующий опыт и&nbsp;буду полезен. Кстати, моя&nbsp;выпускная дипломная работа –&nbsp;образовательная игра.</p>
 					</div>
+					<div class="section-about__btn"><a class="block-btn block-btn--small js--show-about-text" href="#">Читать далее</a></div>
 				</div>
 			</div>
 		</section>
 		<section class="block-section block-section--small-pb" id="skills">
 			<div class="block-section__wrap">
-				<h3 class="block-section__title">Навыки</h3>
+				<h3 class="block-section__title"><span>Навыки</span></h3>
 				<div class="section-skills">
 					<article class="section-skills__item">
 						<h4 class="section-skills__item-title">Вёрстка</h4>
@@ -83,7 +85,7 @@
 						<h4 class="section-skills__item-title">Workflow</h4>
 						<ul class="section-skills__item-descr">
 							<li>Ведение проектов в&nbsp;Git</li>
-							<li>Сборка в&nbsp;Gulp</li>
+							<li>Сборка с&nbsp;помощью Gulp&nbsp;+&nbsp;npm</li>
 							<li>Препроцессоры Less и&nbsp;Pug</li>
 							<li>Контроль задач в&nbsp;Asana или&nbsp;Trello</li>
 						</ul>
@@ -107,15 +109,16 @@
 		</section>
 		<section class="block-section block-section--small-pb" id="exp">
 			<div class="block-section__wrap">
-				<h3 class="block-section__title">Опыт</h3>
+				<h3 class="block-section__title"><span>Опыт</span></h3>
 				<div class="section-exp">
 					<article class="section-exp__item">
 						<h6 class="section-exp__item-title">Университет ИТМО</h6>
 						<p class="section-exp__item-dates">Сентябрь 2014 – Июнь 2018</p>
 						<div class="section-exp__item-descr">
-							<p>Специальность «Интеллектуальные технологии в&nbsp;гуманитарной сфере». Связь между названием и&nbsp;содержанием незначительная. </p>
-							<p>Наиболее полезными оказались полученные контакты и&nbsp;возможности: мероприятия и&nbsp;круг общения. Хотя пригодились и&nbsp;знания по&nbsp;MySQL, PHP, шаблону MVC и&nbsp;фреймворку Django.</p>
+							<p>Специальность «Интеллектуальные технологии в&nbsp;гуманитарной сфере».</p>
+							<p>Пригодились полученные контакты и&nbsp;возможности: мероприятия и&nbsp;круг общения. Хотя пригодились и&nbsp;знания по&nbsp;MySQL, PHP, шаблону MVC и&nbsp;фреймворку Django.</p>
 						</div>
+						<div class="section-exp__btn"><a class="block-btn block-btn--small js--show-text" href="#">Показать описание</a></div>
 					</article>
 					<article class="section-exp__item">
 						<h6 class="section-exp__item-title">Технический специалист</h6>
@@ -128,6 +131,7 @@
 								<li>Создал развлекательную программу для&nbsp;выездных мероприятий, которая используется до&nbsp;сих&nbsp;пор</li>
 							</ul>
 						</div>
+						<div class="section-exp__btn"><a class="block-btn block-btn--small js--show-text" href="#">Показать описание</a></div>
 					</article>
 					<article class="section-exp__item">
 						<h6 class="section-exp__item-title">Курс Front-end разработчик</h6>
@@ -136,6 +140,7 @@
 							<p>От организации «LoftSchool». Курс оказался настолько полезным, что&nbsp;окупился во&nbsp;время обучения: выполнил заказ на&nbsp;разработку сайта. Получил навыки "здорового" front-end разработчика: чистое написание html и&nbsp;css, workflow git&nbsp;+&nbsp;gulp, модульный подход к&nbsp;написанию JS.</p>
 							<p>В&nbsp;рамках курса сделал 3&nbsp;проекта: сайт-портфолио, страницу интернет-магазина и&nbsp;командный проект, который в&nbsp;режиме онлайн добавлял watermark на&nbsp;картинку. В&nbsp;последнем кроме написания кода занимался менеджментом проекта. Курс закончил с&nbsp;отличием и&nbsp;горжусь этим.</p>
 						</div>
+						<div class="section-exp__btn"><a class="block-btn block-btn--small js--show-text" href="#">Показать описание</a></div>
 					</article>
 					<article class="section-exp__item">
 						<h6 class="section-exp__item-title">Менеджер проектов</h6>
@@ -145,73 +150,62 @@
 							<p>В&nbsp;результате собрал команду из&nbsp;4&nbsp;человек и&nbsp;реализовал около 10&nbsp;проектов различных масштабов. Получил отличный опыт и,&nbsp;можно сказать, стал другим человеком&nbsp;=)</p>
 							<p>Ушёл спустя полгода в&nbsp;связи с&nbsp;разногласиями в&nbsp;ценностях и&nbsp;взглядах с&nbsp;руководителем.</p>
 						</div>
+						<div class="section-exp__btn"><a class="block-btn block-btn--small js--show-text" href="#">Показать описание</a></div>
 					</article>
 					<article class="section-exp__item">
 						<h6 class="section-exp__item-title">Руководитель веб-студии</h6>
 						<p class="section-exp__item-dates">Январь 2017 – Март 2018</p>
-						<p class="section-exp__item-descr">Решил организовать собственную веб-студию, благо задачи практически не изменились. В&nbsp;сумме реализовал 7&nbsp;проектов. Увеличил опыт ведения переговоров. И&nbsp;настроил техническую составляющую проектов так, чтобы каждый следующий использовал наработки предыдущего.</p>
+						<div class="section-exp__item-descr">
+							<p>Решил организовать собственную веб-студию, благо задачи практически не изменились. В&nbsp;сумме реализовал 7&nbsp;проектов. Увеличил опыт ведения переговоров. И&nbsp;настроил техническую составляющую проектов так, чтобы каждый следующий использовал наработки предыдущего.</p>
+						</div>
+						<div class="section-exp__btn"><a class="block-btn block-btn--small js--show-text" href="#">Показать описание</a></div>
 					</article>
 					<article class="section-exp__item">
 						<h6 class="section-exp__item-title">Технический специалист</h6>
 						<p class="section-exp__item-dates">Январь 2017 – Март 2018</p>
-						<p class="section-exp__item-descr">В&nbsp;компании «isWash». Погрузился в бизнес, разработал и&nbsp;продвинул сайт компании в&nbsp;поисковой выдаче Яндекс. Подробности о&nbsp;проекте смотрите в&nbsp;портфолио.</p>
+						<div class="section-exp__item-descr">
+							<p>В&nbsp;компании «isWash». Погрузился в бизнес, разработал и&nbsp;продвинул сайт компании в&nbsp;поисковой выдаче Яндекс. Подробности о&nbsp;проекте смотрите в&nbsp;портфолио.</p>
+						</div>
+						<div class="section-exp__btn"><a class="block-btn block-btn--small js--show-text" href="#">Показать описание</a></div>
 					</article>
 				</div>
 			</div>
 		</section>
-		<section class="block-section block-section--small-pb block-section--dark" id="portfolio">
+		<section class="block-section block-section--small-pb" id="portfolio">
 			<div class="block-section__wrap">
-				<h2 class="block-section__title">Портфолио</h2>
+				<h2 class="block-section__title"><span>Портфолио</span></h2>
 				<div class="section-portfolio">
 					<article class="section-portfolio__item">
-						<div class="section-portfolio__item-img"><img src="img/project-iswash.jpg" alt="Проект iswash"></div>
-						<div class="section-portfolio__item-descr">
-							<h6 class="section-portfolio__item-title">Комплексная разработка сайта</h6>
-							<div class="section-portfolio__item-text">
-								<p>С нуля разработал, поддерживал, продвигал и развивал сайт в течение полутора лет. Всё в текущей версии, включая дизайн и тексты, создано мной.</p>
-								<p>Список выполненных задач:</p>
-								<ul>
-									<li>Погружение в логику бизнеса и продукта</li>
-									<li>Составление контента</li>
-									<li>Разработка дизайна</li>
-									<li>Вёрстка и шаблонизация содержимого</li>
-									<li>Посадка на Python Flask</li>
-									<li>SEO оптимизация текстов</li>
-									<li>Поддержка и развитие сайта</li>
-								</ul>
-							</div><a class="section-portfolio__item-link" href="#">Посмотреть проект</a>
+						<div class="section-portfolio__item-content">
+							<div class="section-portfolio__item-img"><img src="img/project-iswash.jpg" alt="Проект iswash"></div>
+							<div class="section-portfolio__item-descr">
+								<h6 class="section-portfolio__item-title">Разработка и&nbsp;продвижение корпоративного сайта</h6>
+								<div class="section-portfolio__item-text">
+									<p>С нуля разработал, поддерживал, продвигал и развивал сайт в течение полутора лет. Всё в текущей версии, включая дизайн и тексты, создано мной.</p>
+								</div><a class="block-btn block-btn--white js--show-project-popup" href="https://github.com/DoYouLikeOrigami/isw" target="_blank" data-src="http://iswash.ru">Посмотреть проект</a>
+							</div>
 						</div>
 					</article>
 					<article class="section-portfolio__item">
-						<div class="section-portfolio__item-img"><img src="img/project-timndv.jpg" alt="Проект timndv"></div>
-						<div class="section-portfolio__item-descr">
-							<h6 class="section-portfolio__item-title">Курирование и разработка проекта</h6>
-							<div class="section-portfolio__item-text">
-								<p>Работали над сайтом недвижимости в команде с дизайнером и 2 фрилансерами. Моими задачами в проекте были:</p>
-								<ul>
-									<li>Согласование всех деталей проекта и бюджета</li>
-									<li>Составление ТЗ для всех задач</li>
-									<li>Подбор фрилансеров, которые занимались контентом</li>
-									<li>Координация работы каждого участника проекта</li>
-									<li>Вёрстка 4 разделов сайта</li>
-									<li>Посадка сайта на PHP с MVC подходом</li>
-								</ul>
-							</div><a class="section-portfolio__item-link" href="#">Посмотреть проект</a>
+						<div class="section-portfolio__item-content">
+							<div class="section-portfolio__item-img"><img src="img/project-timndv.jpg" alt="Проект timndv"></div>
+							<div class="section-portfolio__item-descr">
+								<h6 class="section-portfolio__item-title">Курирование и&nbsp;разработка сайта для&nbsp;агенства недвижимости</h6>
+								<div class="section-portfolio__item-text">
+									<p>Работали над сайтом недвижимости в команде с дизайнером и 2 фрилансерами. Я курировал проект и сделал всю техническую составляющую.</p>
+								</div><a class="block-btn block-btn--white js--show-project-popup" href="https://github.com/DoYouLikeOrigami/timndv" target="_blank" data-src="projects/timndv/index.html">Посмотреть проект</a>
+							</div>
 						</div>
 					</article>
 					<article class="section-portfolio__item">
-						<div class="section-portfolio__item-img"><img src="img/project-fedo.jpg" alt="Проект iswash"></div>
-						<div class="section-portfolio__item-descr">
-							<h6 class="section-portfolio__item-title">Курирование и разработка сайта</h6>
-							<div class="section-portfolio__item-text">
-								<p>Сделали в команде с дизайнером. Моими задачами были:</p>
-								<ul>
-									<li>Согласование деталей и бюджета проекта</li>
-									<li>Вёрстка 2 страниц</li>
-									<li>Программирование калькулятора заказа</li>
-									<li>Подключение Робокассы</li>
-								</ul>
-							</div><a class="section-portfolio__item-link" href="">Посмотреть проект</a>
+						<div class="section-portfolio__item-content">
+							<div class="section-portfolio__item-img"><img src="img/project-fedo.jpg" alt="Проект fedo"></div>
+							<div class="section-portfolio__item-descr">
+								<h6 class="section-portfolio__item-title">Разработка посадочной страницы с&nbsp;онлайн-оплатой</h6>
+								<div class="section-portfolio__item-text">
+									<p>Создал сайт в команде с дизайнером. Сверстал 2 страницы, запрограммировал калькулятор, подключил робокассу и написал тексты.</p>
+								</div><a class="block-btn block-btn--white js--show-project-popup" href="https://github.com/DoYouLikeOrigami/fedo" target="_blank" data-src="projects/fedo/index.html">Посмотреть проект</a>
+							</div>
 						</div>
 					</article>
 				</div>
@@ -219,7 +213,7 @@
 		</section>
 		<section class="block-section" id="contacts">
 			<div class="block-section__wrap">
-				<h3 class="block-section__title">Контакты</h3>
+				<h3 class="block-section__title"><span>Контакты</span></h3>
 				<ul class="section-contacts">
 					<li class="section-contacts__item"><a href="tel:89992390940">+7 999 239-09-40</a></li>
 					<li class="section-contacts__item"><a href="mailto:doyoulikeorigami@gmail.com">doyoulikeorigami@gmail.com</a></li>
@@ -232,6 +226,34 @@
 				</form>
 			</div>
 		</section>
-		<!--include ../blocks/js-common-->
+		<div class="block-project-popup">
+			<div class="block-project-popup__controls">
+				<div class="block-project-popup__wrap"><a class="block-project-popup__controls-link" href="#" target="_blank">Смотреть код на github</a><a class="block-btn block-btn--akcent js--hide-project-popup" href="#">Закрыть проект</a></div>
+			</div>
+			<iframe class="block-project-popup__iframe" src=""></iframe>
+		</div>
+		<nav class="mobile-nav mobile-nav--hidden" id="mobile-nav">
+			<header class="mobile-nav__header">
+				<p>Антон Немцев</p>
+				<p><a href="tel:+79992390940">+7 (999) 239-09-40</a></p>
+			</header>
+			<ul>
+				<li><a class="mobile-nav__link" href="#about"><span>Эбаут</span></a></li>
+				<li><a class="mobile-nav__link" href="#skills"><span>Навыки</span></a></li>
+				<li><a class="mobile-nav__link" href="#exp"><span>Опыт</span></a></li>
+				<li><a class="mobile-nav__link" href="#portfolio"><span>Портфолио</span></a></li>
+				<li><a class="mobile-nav__link" href="#contacts"><span>Контакты</span></a></li>
+				<li><a class="block-btn block-btn--small js-hide-mobile-nav" href="#"><span>Закрыть меню</span></a></li>
+			</ul>
+		</nav>
+		<div class="block-overlay"></div>
+		<div class="block-preloader">
+			<div class="block-preloader__loader"></div>
+		</div>
+		<script src="js/main.js"></script>
+		<script>(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48619775 = new Ya.Metrika({ id:48619775, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
+		<noscript>
+			<div><img src="https://mc.yandex.ru/watch/48619775" style="position:absolute; left:-9999px;" alt="заглушка"></div>
+		</noscript>
 	</body>
 </html>

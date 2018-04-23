@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<link rel="stylesheet" href="./static/css/style.min.css">
+		<meta property="og:image" content="http://fe-do.ru/static/img/main-screen/product.png">
+		<title>Fe-do - Покупка</title>
+		<meta name="description" content="Оформление заказа">
+	</head>
+	<body>
+		<div class="main-layout">
+			<div class="main-layout__info">
+				<section class="main-screen main-screen--no-decor" id="main">
+					<div class="main-screen__wrap">
+						<article class="main-screen__content">
+							<h1 class="main-screen__title">Оформление покупки</h1>
+							<form class="order-form js--order-form" method="post" action="./order.php">
+								<div class="order-form__step">
+									<label class="order-form__label">Введите количество упаковок Fe-Do
+										<input class="order-form__input order-form__input--short" type="number" min="1" max="50" name="amount" value="1" required>
+									</label>
+								</div>
+								<div class="order-form__step js--geo-block">
+									<p class="order-form__step-text">Выберите местоположение</p>
+									<input class="order-form__radio js--geo" type="radio" name="geo" value="СПб" id="i-g-s" required data-geo="spb">
+									<label class="order-form__label order-form__label--radio" for="i-g-s">Санкт-Петербург</label>
+									<input class="order-form__radio js--geo" type="radio" name="geo" value="Россия и СНГ" id="i-g-r" required data-geo="russia">
+									<label class="order-form__label order-form__label--radio" for="i-g-r">Россия и СНГ</label>
+								</div>
+								<div class="order-form__step js--delivery-block">
+									<p class="order-form__step-text">Выберите способ доставки</p>
+									<input class="order-form__radio js--delivery js--delivery-spb" type="radio" name="delivery" value="Курьер" disabled id="i-d-k" data-address="courier">
+									<label class="order-form__label order-form__label--disabled order-form__label--radio" for="i-d-k">Курьером 250 руб</label>
+									<input class="order-form__radio js--delivery js--delivery-russia" type="radio" name="delivery" value="Почта" disabled id="i-d-p" data-address="delivery">
+									<label class="order-form__label order-form__label--disabled order-form__label--radio" for="i-d-p">Почтой 300 руб</label>
+									<input class="order-form__radio js--delivery js--delivery-spb" type="radio" name="delivery" value="Самовывоз" disabled id="i-d-s" data-address="selftake">
+									<label class="order-form__label order-form__label--disabled order-form__label--radio" for="i-d-s">Самовывоз в Санкт-Петербурге</label>
+								</div>
+								<div class="order-form__step order-form__step--hidden js--address-block js--address-block-delivery">
+									<p class="order-form__step-text">Введите информацию для доставки</p>
+									<label class="order-form__label">Точный адрес
+										<input class="order-form__input order-form__input--long" type="text" name="address" placeholder="Город, улица, дом, квартира" disabled>
+									</label>
+									<label class="order-form__label">Почтовый индекс
+										<input class="order-form__input order-form__input--short" type="text" name="address-index" placeholder="000000" disabled>
+									</label>
+								</div>
+								<div class="order-form__step order-form__step--hidden js--address-block-selftake js--address-block">
+									<label class="order-form__label">Выберите пункт самовывоза
+										<select class="order-form__input" name="selftake" disabled>
+											<option value="б. Новаторов 67к2">Новаторов б, 67к2</option>
+											<option value="пр-т Народного Ополчения 10">Народного Ополчения пр-т, 10, офис 221Н</option>
+											<option value="Кронштадтская 11">Кронштадтская ул, 11</option>
+											<option value="Алтайская 3">Алтайская ул, 3, офис 10</option>
+											<option value="Московское шоссе 7">Московское шоссе 7, ТЦ "Торговый Двор"</option>
+											<option value="Балканская площадь 5">Балканская площадь 5, ТК "Домострой" секция 22</option>
+											<option value="Обуховской обороны пр-т, 120Б">Обуховской обороны пр-т, 120Б</option>
+											<option value="Полярников ул, 12">Полярников ул, 12</option>
+											<option value="Белы-Куна ул, 20к1">Белы-Куна ул, 20к1, офис 40</option>
+											<option value="Юрия Гагрина пр-кт, 2">Юрия Гагрина пр-кт, 2, ТЦ "Благодатный"</option>
+											<option value="Крыленко ул, 21к1">Крыленко ул, 21к1</option>
+											<option value="Подольская ул, 31">Подольская ул, 31</option>
+											<option value="Лиговский пр-кт, 50к13">Лиговский пр-кт, 50к13, офис 100а</option>
+											<option value="Ефимова ул, 4А">Ефимова ул, 4А, офис 200</option>
+											<option value="Чайковского ул, 34">Чайковского ул, 34</option>
+											<option value="Одоевского ул, 28">Одоевского ул, 28</option>
+											<option value="Плуталова ул, 8А">Плуталова ул, 8А</option>
+											<option value="Энергетиков пр-кт, 9А">Энергетиков пр-кт, 9А</option>
+											<option value="Комиссара Смирнова ул, 5/2 А">Комиссара Смирнова ул, 5/2 А, помещение 11</option>
+											<option value="Торфяная дорога, 2к1 А">Торфяная дорога, 2к1 А</option>
+											<option value="Комендантский пр-кт, 4к2">Комендантский пр-кт, 4к2, секция 001</option>
+											<option value="Коломяжский пр-кт, 28к2">Коломяжский пр-кт, 28к2, офис 14</option>
+											<option value="2ой Муринский пр-кт, 38А">2ой Муринский пр-кт, 38А,  ТЦ "Клондайк" 1 этаж 66 секция</option>
+											<option value="Гражданский пр-кт, 84">Гражданский пр-кт, 84, офис 15Н</option>
+											<option value="Лиговский пр-кт, 13">Лиговский пр-кт, 13, офис 100Б</option>
+										</select>
+									</label>
+								</div>
+								<div class="order-form__step order-form__step--hidden js--address-block-courier js--address-block">
+									<label class="order-form__label">Введите точный адрес
+										<input class="order-form__input" type="text" name="address" placeholder="Город, улица, дом, квартира" disabled>
+									</label>
+								</div>
+								<div class="order-form__step js--pay-block">
+									<p class="order-form__step-text">Выберите способ оплаты</p>
+									<input class="order-form__radio js--pay js--pay-online" type="radio" name="pay" value="Оплата онлайн" id="i-p-o">
+									<label class="order-form__label order-form__label--radio" for="i-p-o">Оплатить онлайн</label>
+									<input class="order-form__radio js--pay js--pay-courier" type="radio" name="pay" value="Оплата курьеру" disabled id="i-p-k">
+									<label class="order-form__label order-form__label--disabled order-form__label--radio" for="i-p-k">Оплатить курьеру при доставке</label>
+									<input class="order-form__radio js--pay" type="radio" name="pay" value="Оплата наложенным платежом" id="i-p-n">
+									<label class="order-form__label order-form__label--radio" for="i-p-n">Оплатить наложенным платежом</label>
+								</div>
+								<div class="order-form__step">
+									<p class="order-form__step-text">Введите контактные данные для связи</p>
+									<label class="order-form__label">Телефон
+										<input class="order-form__input" type="tel" name="tel" placeholder="+7 999 123-45-67" required>
+									</label>
+									<label class="order-form__label">E-mail
+										<input class="order-form__input" type="email" name="email" placeholder="name@mail.ru" required>
+									</label>
+									<label class="order-form__label">ФИО, на кого оформить заказ
+										<input class="order-form__input" type="text" name="name" placeholder="Например, Иванов Иван Иванович" required>
+									</label>
+								</div>
+								<button class="btn btn--akcent js--submit-btn" type="submit">Оформить покупку</button>
+							</form>
+						</article>
+						<div class="main-screen__img"><img src="static/img/main-screen/product.png" alt="Fe-do"></div>
+					</div>
+				</section>
+				<div class="popup popup--js-call">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<p class="popup__text">Введите номер&nbsp;телефона, и&nbsp;мы&nbsp;перезвоним в&nbsp;течение&nbsp;5&nbsp;минут!</p>
+						<form class="popup__form js--form" method="post" action="./call.php">
+							<label>
+								<input type="tel" name="tel" placeholder="+7 999 999-99-99" required>
+							</label>
+							<input type="hidden" name="info" value="Заказ звонка">
+							<button class="btn btn--akcent" type="submit">Заказать звонок</button>
+						</form>
+					</div>
+				</div>
+				<div class="popup popup--js-video">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<iframe class="popup__video" src="https://www.youtube.com/embed/MWghCU8Mup0?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="popup popup--js-img">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<p class="popup__comment-par">Фотография поверхности до обработки</p><img src="static/img/section-adv/1.jpg" alt="Фото до обработки">
+						<p class="popup__comment-par">Фотография поверхности во время обработки</p><img src="static/img/section-adv/2.jpg" alt="Фото во время обработки">
+						<p class="popup__comment-par">Фотография поверхности после обработки</p><img src="static/img/section-adv/3.jpg" alt="Фото после обработки">
+						<p class="popup__comment-par"><a class="btn btn--akcent js--close-popup" href="#">Закрыть окно</a></p>
+					</div>
+				</div>
+				<div class="popup popup--js-consult">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<p class="popup__text">Выберите удобный способ консультации:<br>по телефону или в режиме онлайн-чата</p>
+						<div class="popup__flex"><a class="btn btn--akcent js--show-widget" href="#">В онлайн-чате</a><a class="btn btn--akcent js--show-call-popup" href="#">По телефону</a></div>
+					</div>
+				</div>
+				<div class="popup popup--big popup--js-test-5">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<div class="section-test">
+							<div class="section-test__wrap">
+								<article class="section-test__article">
+									<h4 class="section-test__title">Испытание FeDo</h4>
+									<div class="section-test__article-content">
+										<div class="section-test__article-img" style="background-image: url(static/img/section-test/img-lift.jpg);"></div>
+										<div class="section-test__article-text">
+											<h5 class="section-test__article-title">Предотвращение износа и уменьшение уровня шума подъёмного механизма</h5>
+											<div class="section-test__article-descr">
+												<p>Исследования проводились на зубчатой рейке подъёмного устройства лифта.</p>
+												<p>Износ 2 зубов за 29 месяцев эксплуатации с применением немецкого HHS 5000 составил 0,63 мм и 0,47 мм. Уровень шума в кабине достиг 112 Дб.</p>
+											</div><a class="btn btn--gradient" href="https://drive.google.com/file/d/1wNX7Qnhak8B6EcUr4uyk04moJTF0McLz/view?usp=sharing" target="_blank">Смотреть ксерокопию акта испытаний</a>
+										</div>
+									</div>
+									<p class="section-test__article-result"><b>Результат:</b>Через 29 месяцев эксплуатации с использованием FeDo износ прекратился, поверхность второго зуба восстановилась на 0,03 мм. Уровень шума в кабине упал до 75 Дб.</p>
+									<div style="text-align: center;"><a class="btn btn--akcent js--show-test-6-popup" href="#">Смотреть следующее испытание</a></div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup popup--big popup--js-test-1">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<div class="section-test">
+							<div class="section-test__wrap">
+								<article class="section-test__article">
+									<h4 class="section-test__title">Испытание гоночного автомобиля</h4>
+									<div class="section-test__article-content">
+										<div class="section-test__article-img" style="background-image: url(static/img/section-test/img-speed.jpg);"></div>
+										<div class="section-test__article-text">
+											<h5 class="section-test__article-title">Увеличение компрессии на 1,5 кг/см2</h5>
+											<div class="section-test__article-descr">
+												<p>Исследования проводились на автомобиле марки ВАЗ с ДВС 2112 объемом 1600см, готовящемся для участия в ралли. ДВС обработали дважды по 35 минут с перерывом по 10 минут до старта.</p>
+											</div><a class="btn btn--gradient" href="https://drive.google.com/file/d/1T_ITO35gQ-48TFSDl-2wbTLlGjj5KDht/view?usp=sharing" target="_blank">Смотреть ксерокопию акта испытаний</a>
+										</div>
+									</div>
+									<p class="section-test__article-result"><b>Результат:</b>Кроме увеличения компресии; повысилось давление масла; уменьшилась дымность: цвет выхлопа стал светлее; снизилась вибрация ДВС; снизился расход топлива.</p>
+									<div style="text-align: center;"><a class="btn btn--akcent js--show-test-2-popup" href="#">Смотреть следующее испытание</a></div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup popup--big popup--js-test-2">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<div class="section-test">
+							<div class="section-test__wrap">
+								<article class="section-test__article">
+									<h4 class="section-test__title">Испытания редуктора</h4>
+									<div class="section-test__article-content">
+										<div class="section-test__article-img" style="background-image: url(static/img/section-test/img-reductor.jpg);"></div>
+										<div class="section-test__article-text">
+											<h5 class="section-test__article-title">Уменьшение виброскорости и температуры редуктора на 52% и 30&deg;</h5>
+											<div class="section-test__article-descr">
+												<p>Испытывали на стенде петербургского трамвайно-механического завода.</p>
+												<p>В течение 36 часов замеряли виброскорость и температуру редуктора колёсной пары вагонной тележки трамвая. Половину времени он работал без нанесения гелевой формы FeDo, вторую половину - с нанесением.</p>
+											</div><a class="btn btn--gradient" href="https://drive.google.com/file/d/1sF6TERABqFlLeZn5iOeEejBphemcbkuW/view?usp=sharing" target="_blank">Смотреть ксерокопию акта испытаний</a>
+										</div>
+									</div>
+									<p class="section-test__article-result"><b>Результат:</b>Измерения показали уменьшение виброскорости на 52%, температуры на 30&deg; при применении FeDo. Чем ниже показатели, тем меньше износ механизма.</p>
+									<div style="text-align: center;"><a class="btn btn--akcent js--show-test-3-popup" href="#">Смотреть следующее испытание</a></div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup popup--big popup--js-test-3">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<div class="section-test">
+							<div class="section-test__wrap">
+								<article class="section-test__article">
+									<h4 class="section-test__title">Испытания мостового крана</h4>
+									<div class="section-test__article-content">
+										<div class="section-test__article-img" style="background-image: url(static/img/section-test/img-kran.jpg);"></div>
+										<div class="section-test__article-text">
+											<h5 class="section-test__article-title">Снижение темпа износа колёс мостового крана в 5-8 раз</h5>
+											<div class="section-test__article-descr">
+												<p>Испытывали гребни колёс мостового крана гелиевой формой FeDo. Композицию нанесли на правые колёса, левые оставили необработанными для сравнения.</p>
+												<p>Измеряли межбордное расстояние. Результаты сравнили через 2 месяца после нанесения состава.</p>
+											</div><a class="btn btn--gradient" href="https://drive.google.com/file/d/1k_MCu7fF0ChMOekaTxFts5WXUCzbjmti/view?usp=sharing" target="_blank">Смотреть ксерокопию акта испытаний</a>
+										</div>
+									</div>
+									<p class="section-test__article-result"><b>Результат:</b>Темпы износа снизились в 5-8 раз. Периодическая обработка колёс составом пропорционально увеличит срок их службы.</p>
+									<div style="text-align: center;"><a class="btn btn--akcent js--show-test-4-popup" href="#">Смотреть следующее испытание</a></div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup popup--big popup--js-test-4">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<div class="section-test">
+							<div class="section-test__wrap">
+								<article class="section-test__article">
+									<h4 class="section-test__title">Опыт автопарка</h4>
+									<div class="section-test__article-content">
+										<div class="section-test__article-img" style="background-image: url(static/img/section-test/img-auto.jpg);"></div>
+										<div class="section-test__article-text">
+											<h5 class="section-test__article-title">Уменьшение числа капитальных ремонтов в автопарке на 25%</h5>
+											<div class="section-test__article-descr">
+												<p>Автопарк начал применение ремонтной композиции ТСК (гелевая форма FeDo, с тем же составом) с целью уменьшить частоту капитальных ремонтов автомобилей.</p>
+												<p>Сравнивали по годам: год до этого без использования ТСК, и год с использованием.</p>
+											</div><a class="btn btn--gradient" href="https://drive.google.com/file/d/1_CNWrT874jIGT5uaMsnUWhhOP0nH4t26/view?usp=sharing" target="_blank">Смотреть ксерокопию акта испытаний</a>
+										</div>
+									</div>
+									<p class="section-test__article-result"><b>Результат:</b>Уменьшение количества ремонтов на 25%. После чего решили использовать ТСК и в будущем.</p>
+									<div style="text-align: center;"><a class="btn btn--akcent js--show-test-5-popup" href="#">Смотреть следующее испытание</a></div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup popup--big popup--js-test-6">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<div class="section-test">
+							<div class="section-test__wrap">
+								<article class="section-test__article">
+									<h4 class="section-test__title">Испытание ЖД транспорта</h4>
+									<div class="section-test__article-content">
+										<div class="section-test__article-img" style="background-image: url(static/img/section-test/img-train.jpg);"></div>
+										<div class="section-test__article-text">
+											<h5 class="section-test__article-title">Снижение износа более чем в 2 раза</h5>
+											<div class="section-test__article-descr">
+												<p>В течение 2 лет проводилось наблюдение за 6 вагонами с нанесённой смазкой на шарнирные соединения тормозной рычажной передачи тележек и вагона.</p>
+												<p>Износ валиков и втулок после 2 лет эксплуатации составил 0,5 - 0,9 мм - в пределах нормы для пробега 450 тыс. км. авил 0,63 мм и 0,47 мм. Уровень шума в кабине достиг 112 Дб. Износ на 6 необработанных вагонах составил свыше 2 мм, из-за чего пришлось провести полную замену валиков и втулок.</p>
+												<p>(используемая смазка - гелевое состояние Fe-do, с аналогичным составом и эффектами)</p>
+											</div><a class="btn btn--gradient" href="https://drive.google.com/file/d/12TQd--vI4qQ2RtAJmkmv8zUR85s15fK-/view?usp=sharing" target="_blank">Смотреть ксерокопию акта испытаний</a>
+										</div>
+									</div>
+									<p class="section-test__article-result"><b>Результат:</b>Износ уменьшился в 4 раза и не вышел за пределы нормы после двух лет эксплуатации.</p>
+									<div style="text-align: center;"><a class="btn btn--akcent js--show-test-1-popup" href="#">Смотреть следующее испытание</a></div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup popup--js-mobile-nav">
+					<button class="popup__close js--close-popup">&#10006;</button>
+					<div class="popup__body">
+						<nav class="popup__nav"><a href="#main">Главная</a><a href="#assort">Ассортимент</a><a href="#pay">Оплата</a><a href="#get">Доставка</a><a href="#produce">Производство</a><a href="#objects">Объекты</a></nav>
+					</div>
+				</div>
+			</div>
+			<nav class="main-nav"><a class="main-nav__logo" href="./index.html">
+					<p class="main-nav__logo-big">СЗВК НПФ КАРАТ</p>
+					<p class="main-nav__logo-small">Производитель ресурсосберегающих технологий</p></a>
+				<div class="main-nav__phone"><a class="main-nav__phone-tel" href="tel:+78129227945">+7 812 922-79-45</a><a class="btn btn--dark btn--small js--show-call-popup" href="#">Заказать звонок</a></div>
+				<div class="main-nav__links"><a class="main-nav__links-item" href="./index.html">На главную</a></div>
+			</nav>
+		</div>
+		<div class="overlay"></div>
+		<script src="./static/js/main.js"></script>
+	</body>
+</html>
