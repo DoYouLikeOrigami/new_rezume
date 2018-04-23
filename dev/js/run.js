@@ -1,0 +1,2 @@
+'use strict';
+mainModule.init();

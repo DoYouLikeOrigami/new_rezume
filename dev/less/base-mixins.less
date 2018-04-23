@@ -26,24 +26,29 @@
 	.big-text;
 	font-weight: bold;
 
-	&::before {
-		content: "";
-
+	span {
 		display: inline-block;
-		vertical-align: middle;
+		position: relative;
 
-		width: 45px;
-		height: 10px;
+		&::before {
+			content: "";
 
-		margin-right: 30px;
+			display: block;
+			position: absolute;
 
-		background-color: @akcentColor;
+			width: 10px;
+			height: 100%;
 
-		@media @mobile {
-			width: 30px;
-			height: 5px;
+			top: 0;
+			left: -40px;
 
-			margin-right: 20px;
+			background-color: @akcentColor;
+
+			@media @mobile {
+				width: 5px;
+
+				left: -25px;
+			}
 		}
 	}
 }

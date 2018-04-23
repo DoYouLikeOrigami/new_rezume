@@ -1,8 +1,8 @@
 extends ../layouts/base
 
 block seo
-	title Заголовок
-	meta(name="description" content="")
+	title Сайт Антона Немцева
+	meta(name="description" content="Привет! Здесь актуальная информация про меня как Front-end разработчика")
 
 block main-content
 	.main-topper
@@ -20,7 +20,7 @@ block main-content
 					li
 						a(href="#contacts") Контакты
 
-			a.main-topper__mobile-btn(href="#")
+			a.main-topper__mobile-btn.js-show-mobile-nav(href="#")
 				span 1
 				span 2
 				span 3
@@ -41,18 +41,23 @@ block main-content
 				p.main-screen__descr
 					| Front-end разработчик, который любит развитие, ответственные дела и игры 
 
-				a.block-btn.block-btn--akcent(href="#contants")
-					| Связаться со мной
+				.main-screen__btns
+					a.block-btn.block-btn--akcent.js--main-scroll(href="#contacts")
+						| Связаться со мной
+
+					a.block-btn.block-btn--white(href="https://github.com" target="_blank")
+						| Смотреть github
 	
 
 	section.block-section#about
 		.block-section__wrap
 			h2.block-section__title
-				| Эбаут
+				span Эбаут
 
 			.section-about
 				.section-about__img
 					img(src="img/about.jpg" alt="Моё фото")
+
 				.section-about__text
 					p Привет! О&nbsp;опыте и&nbsp;способностях написано ниже, здесь расскажу о&nbsp;ценностях и&nbsp;интересах. Их&nbsp;три группы: развитие, ответственные дела и&nbsp;игры.
 
@@ -60,13 +65,16 @@ block main-content
 
 					p Ответственные дела поддерживают тонус. Знание, что&nbsp;другие на&nbsp;тебя рассчитывают, отлично мотивирует. Поэтому постоянно где-нибудь участвую.
 
-					p Игры в&nbsp;широком смысле воспринимаю как&nbsp;искусство. Люблю играть, придумывать игры и&nbsp;встраивать&nbsp;их в&nbsp;различные виды деятельности. Например, образование или&nbsp;публичные выступления. Сейчас погружаюсь в&nbsp;разработку компьютерных игр, поэтому ищу места, где&nbsp;получу соответствующий опыт и&nbsp;буду полезен.
+					p Игры в&nbsp;широком смысле воспринимаю как&nbsp;искусство. Люблю играть, придумывать игры и&nbsp;встраивать&nbsp;их в&nbsp;различные виды деятельности. Например, образование или&nbsp;публичные выступления. Сейчас погружаюсь в&nbsp;разработку компьютерных игр, поэтому ищу место, где&nbsp;получу соответствующий опыт и&nbsp;буду полезен. Кстати, моя&nbsp;выпускная дипломная работа –&nbsp;образовательная игра.
+
+				.section-about__btn
+					a.block-btn.block-btn--small.js--show-about-text(href="#") Читать далее
 
 
 	section.block-section.block-section--small-pb#skills
 		.block-section__wrap
 			h3.block-section__title
-				| Навыки
+				span Навыки
 
 			.section-skills
 				article.section-skills__item
@@ -91,7 +99,7 @@ block main-content
 						| Workflow
 					ul.section-skills__item-descr
 						li Ведение проектов в&nbsp;Git
-						li Сборка в&nbsp;Gulp
+						li Сборка с&nbsp;помощью Gulp&nbsp;+&nbsp;npm
 						li Препроцессоры Less и&nbsp;Pug
 						li Контроль задач в&nbsp;Asana или&nbsp;Trello
 
@@ -113,7 +121,7 @@ block main-content
 	section.block-section.block-section--small-pb#exp
 		.block-section__wrap
 			h3.block-section__title
-				| Опыт
+				span Опыт
 
 			.section-exp
 				article.section-exp__item
@@ -122,8 +130,11 @@ block main-content
 					p.section-exp__item-dates
 						| Сентябрь 2014 – Июнь 2018
 					.section-exp__item-descr
-						p Специальность «Интеллектуальные технологии в&nbsp;гуманитарной сфере». Связь между названием и&nbsp;содержанием незначительная. 
-						p Наиболее полезными оказались полученные контакты и&nbsp;возможности: мероприятия и&nbsp;круг общения. Хотя пригодились и&nbsp;знания по&nbsp;MySQL, PHP, шаблону MVC и&nbsp;фреймворку Django.
+						p Специальность «Интеллектуальные технологии в&nbsp;гуманитарной сфере».
+						p Пригодились полученные контакты и&nbsp;возможности: мероприятия и&nbsp;круг общения. Хотя пригодились и&nbsp;знания по&nbsp;MySQL, PHP, шаблону MVC и&nbsp;фреймворку Django.
+
+					.section-exp__btn
+						a.block-btn.block-btn--small.js--show-text(href="#") Показать описание
 
 				article.section-exp__item
 					h6.section-exp__item-title
@@ -137,6 +148,9 @@ block main-content
 							li Организовал ораторский клуб, который в итоге собирался 2&nbsp;раза в&nbsp;месяц в&nbsp;составе от&nbsp;15&nbsp;человек
 							li Создал развлекательную программу для&nbsp;выездных мероприятий, которая используется до&nbsp;сих&nbsp;пор
 
+					.section-exp__btn
+						a.block-btn.block-btn--small.js--show-text(href="#") Показать описание
+
 				article.section-exp__item
 					h6.section-exp__item-title
 						| Курс Front-end разработчик
@@ -145,6 +159,9 @@ block main-content
 					.section-exp__item-descr
 						p От организации «LoftSchool». Курс оказался настолько полезным, что&nbsp;окупился во&nbsp;время обучения: выполнил заказ на&nbsp;разработку сайта. Получил навыки "здорового" front-end разработчика: чистое написание html и&nbsp;css, workflow git&nbsp;+&nbsp;gulp, модульный подход к&nbsp;написанию JS.
 						p В&nbsp;рамках курса сделал 3&nbsp;проекта: сайт-портфолио, страницу интернет-магазина и&nbsp;командный проект, который в&nbsp;режиме онлайн добавлял watermark на&nbsp;картинку. В&nbsp;последнем кроме написания кода занимался менеджментом проекта. Курс закончил с&nbsp;отличием и&nbsp;горжусь этим.
+
+					.section-exp__btn
+						a.block-btn.block-btn--small.js--show-text(href="#") Показать описание
 
 				article.section-exp__item
 					h6.section-exp__item-title
@@ -156,97 +173,88 @@ block main-content
 						p В&nbsp;результате собрал команду из&nbsp;4&nbsp;человек и&nbsp;реализовал около 10&nbsp;проектов различных масштабов. Получил отличный опыт и,&nbsp;можно сказать, стал другим человеком&nbsp;=)
 						p Ушёл спустя полгода в&nbsp;связи с&nbsp;разногласиями в&nbsp;ценностях и&nbsp;взглядах с&nbsp;руководителем.
 
+					.section-exp__btn
+						a.block-btn.block-btn--small.js--show-text(href="#") Показать описание
+
 				article.section-exp__item
 					h6.section-exp__item-title
 						| Руководитель веб-студии
 					p.section-exp__item-dates
 						| Январь 2017 – Март 2018
-					p.section-exp__item-descr
-						| Решил организовать собственную веб-студию, благо задачи практически не изменились. В&nbsp;сумме реализовал 7&nbsp;проектов. Увеличил опыт ведения переговоров. И&nbsp;настроил техническую составляющую проектов так, чтобы каждый следующий использовал наработки предыдущего.
+					.section-exp__item-descr
+						p Решил организовать собственную веб-студию, благо задачи практически не изменились. В&nbsp;сумме реализовал 7&nbsp;проектов. Увеличил опыт ведения переговоров. И&nbsp;настроил техническую составляющую проектов так, чтобы каждый следующий использовал наработки предыдущего.
+
+					.section-exp__btn
+						a.block-btn.block-btn--small.js--show-text(href="#") Показать описание
 
 				article.section-exp__item
 					h6.section-exp__item-title
 						| Технический специалист
 					p.section-exp__item-dates
 						| Январь 2017 – Март 2018
-					p.section-exp__item-descr
-						| В&nbsp;компании «isWash». Погрузился в бизнес, разработал и&nbsp;продвинул сайт компании в&nbsp;поисковой выдаче Яндекс. Подробности о&nbsp;проекте смотрите в&nbsp;портфолио.
+					.section-exp__item-descr
+						p В&nbsp;компании «isWash». Погрузился в бизнес, разработал и&nbsp;продвинул сайт компании в&nbsp;поисковой выдаче Яндекс. Подробности о&nbsp;проекте смотрите в&nbsp;портфолио.
+
+					.section-exp__btn
+						a.block-btn.block-btn--small.js--show-text(href="#") Показать описание
 
 
-	section.block-section.block-section--small-pb.block-section--dark#portfolio
+	section.block-section.block-section--small-pb#portfolio
 		.block-section__wrap
 			h2.block-section__title
-				| Портфолио
+				span Портфолио
 
 			.section-portfolio
 				article.section-portfolio__item
-					.section-portfolio__item-img
-						img(src="img/project-iswash.jpg" alt="Проект iswash")
+					.section-portfolio__item-content
+						.section-portfolio__item-img
+							img(src="img/project-iswash.jpg" alt="Проект iswash")
 
-					.section-portfolio__item-descr
-						h6.section-portfolio__item-title
-							| Комплексная разработка сайта
-						.section-portfolio__item-text
-							p С нуля разработал, поддерживал, продвигал и развивал сайт в течение полутора лет. Всё в текущей версии, включая дизайн и тексты, создано мной.
+						.section-portfolio__item-descr
+							h6.section-portfolio__item-title
+								| Разработка и&nbsp;продвижение корпоративного сайта
 
-							p Список выполненных задач:
+							.section-portfolio__item-text
+								p С нуля разработал, поддерживал, продвигал и развивал сайт в течение полутора лет. Всё в текущей версии, включая дизайн и тексты, создано мной.
 
-							ul
-								li Погружение в логику бизнеса и продукта
-								li Составление контента
-								li Разработка дизайна
-								li Вёрстка и шаблонизация содержимого
-								li Посадка на Python Flask
-								li SEO оптимизация текстов
-								li Поддержка и развитие сайта
-
-						a.section-portfolio__item-link(href="#")
-							| Посмотреть проект
+							a.block-btn.block-btn--white.js--show-project-popup(href="https://github.com/DoYouLikeOrigami/isw" target="_blank" data-src="http://iswash.ru")
+								| Посмотреть проект
 
 				article.section-portfolio__item
-					.section-portfolio__item-img
-						img(src="img/project-timndv.jpg" alt="Проект timndv")
+					.section-portfolio__item-content
+						.section-portfolio__item-img
+							img(src="img/project-timndv.jpg" alt="Проект timndv")
 
-					.section-portfolio__item-descr
-						h6.section-portfolio__item-title
-							| Курирование и разработка проекта
-						.section-portfolio__item-text
-							p Работали над сайтом недвижимости в команде с дизайнером и 2 фрилансерами. Моими задачами в проекте были:
+						.section-portfolio__item-descr
+							h6.section-portfolio__item-title
+								| Курирование и&nbsp;разработка сайта для&nbsp;агенства недвижимости
 
-							ul
-								li Согласование всех деталей проекта и бюджета
-								li Составление ТЗ для всех задач
-								li Подбор фрилансеров, которые занимались контентом
-								li Координация работы каждого участника проекта
-								li Вёрстка 4 разделов сайта
-								li Посадка сайта на PHP с MVC подходом
+							.section-portfolio__item-text
+								p Работали над сайтом недвижимости в команде с дизайнером и 2 фрилансерами. Я курировал проект и сделал всю техническую составляющую.
 
-						a.section-portfolio__item-link(href="#")
-							| Посмотреть проект
+							a.block-btn.block-btn--white.js--show-project-popup(href="https://github.com/DoYouLikeOrigami/timndv" target="_blank" data-src="projects/timndv/index.html")
+								| Посмотреть проект
 
 				article.section-portfolio__item
-					.section-portfolio__item-img
-						img(src="img/project-fedo.jpg" alt="Проект iswash")
+					.section-portfolio__item-content
+						.section-portfolio__item-img
+							img(src="img/project-fedo.jpg" alt="Проект fedo")
 
-					.section-portfolio__item-descr
-						h6.section-portfolio__item-title
-							| Курирование и разработка сайта
-						.section-portfolio__item-text
-							p Сделали в команде с дизайнером. Моими задачами были:
-							ul
-								li Согласование деталей и бюджета проекта
-								li Вёрстка 2 страниц
-								li Программирование калькулятора заказа
-								li Подключение Робокассы
+						.section-portfolio__item-descr
+							h6.section-portfolio__item-title
+								| Разработка посадочной страницы с&nbsp;онлайн-оплатой
 
-						a.section-portfolio__item-link(href="")
-							| Посмотреть проект
+							.section-portfolio__item-text
+								p Создал сайт в команде с дизайнером. Сверстал 2 страницы, запрограммировал калькулятор, подключил робокассу и написал тексты.
+
+							a.block-btn.block-btn--white.js--show-project-popup(href="https://github.com/DoYouLikeOrigami/fedo" target="_blank" data-src="projects/fedo/index.html")
+								| Посмотреть проект
 
 
 	section.block-section#contacts
 		.block-section__wrap
 			h3.block-section__title
-				| Контакты
+				span Контакты
 
 			ul.section-contacts
 				li.section-contacts__item
@@ -265,3 +273,13 @@ block main-content
 				input.block-form__input(type="email" name="email" required placeholder="Введите e-mail")
 				button.block-btn.block-btn--akcent(type="submit") Получить резюме
 
+	.block-project-popup
+		.block-project-popup__controls
+			.block-project-popup__wrap
+				a.block-project-popup__controls-link(href="#" target="_blank")
+					| Смотреть код на github
+				a.block-btn.block-btn--akcent.js--hide-project-popup(href="#")
+					| Закрыть проект
+
+		iframe.block-project-popup__iframe(src="")
+		

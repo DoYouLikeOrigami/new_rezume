@@ -1,6 +1,7 @@
 .section-about {
 	display: flex;
 	justify-content: space-between;
+	align-items: stretch;
 
 	@media @tablet {
 		flex-wrap: wrap;
@@ -10,14 +11,14 @@
 	&__img {
 		display: block;
 
-		flex: 0 0 280px;
-		height: 280px;
+		flex: 0 0 280px;		
 
 		border-radius: 10px;
 		overflow: hidden;
 
 		@media @tablet {
 			.margin-bottom;
+			height: 280px;
 		} 
 
 		img {
@@ -30,8 +31,11 @@
 		display: block;
 		flex: 0 0 600px;
 
+		padding-top: 15px;
+
 		@media @tablet {
 			flex: 1 1 100%;
+			padding-top: 0;
 		}
 
 		p {
@@ -40,6 +44,41 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
+
+			@media @mobile {
+				transition: .3s;
+				height: 0;
+				margin-bottom: 0;
+				overflow: hidden;
+
+				&:first-child {
+					height: auto;
+					.margin-bottom(.5);
+				}
+			}
+		}
+
+		&--mobile-visible {
+			@media @mobile {
+				p {
+					height: auto;
+					.margin-bottom(.5);
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__btn {
+		display: none;
+
+		flex: 1 1 100%;
+
+		@media @mobile {
+			display: block;
 		}
 	}
 }

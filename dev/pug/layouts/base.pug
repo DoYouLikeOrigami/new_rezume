@@ -9,21 +9,33 @@ html(lang="ru" prefix="og: http://ogp.me/ns#")
 
 		link(rel="stylesheet", href="css/style.min.css")
 
-		meta(property="og:url" content="")
-		meta(property="og:title" content="Сайт-резюме")
+		meta(property="og:url" content="http://nemtsev.site")
+		meta(property="og:title" content="Сайт Антона Немцева")
 		meta(property="og:description" content="Описание")
-		meta(property="og:image" content="")
+		meta(property="og:image" content="img/about.jpg")
 		meta(property="og:type" content="website")
-		meta(property="og:site_name" content="")
+		meta(property="og:site_name" content="Сайт Антона Немцева")
 		meta(property="og:locale" content="ru_RU")
 
-		meta(property="url" content="")
-		meta(property="title" content="")
-		meta(property="description" content="")
-		meta(property="image" content="")
+		meta(property="url" content="http://nemtsev.site")
+		meta(property="title" content="Сайт Антона Немцева")
+		meta(property="description" content="Привет! Здесь актуальная информация про меня как Front-end разработчика")
+		meta(property="image" content="img/about.jpg")
 
 		block seo
 
 	body
 		block main-content
-		//include ../blocks/js-common
+			
+		include ../blocks/mobile-nav.pug
+		.block-overlay
+
+		.block-preloader
+			.block-preloader__loader
+
+		script(src="js/main.js")
+		script
+			| (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48619775 = new Ya.Metrika({ id:48619775, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+		noscript
+			div
+				img(src="https://mc.yandex.ru/watch/48619775" style="position:absolute; left:-9999px;" alt="заглушка")
