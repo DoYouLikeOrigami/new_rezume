@@ -41,7 +41,7 @@
 				<article class="main-screen__info">
 					<h1 class="main-screen__title">Антон Немцев</h1>
 					<p class="main-screen__descr">Front-end разработчик, который любит развитие, ответственные дела и игры </p>
-					<div class="main-screen__btns"><a class="block-btn block-btn--akcent js--main-scroll" href="#contacts">Связаться со мной</a><a class="block-btn block-btn--white" href="https://github.com" target="_blank">Смотреть github</a></div>
+					<div class="main-screen__btns"><a class="block-btn block-btn--akcent js--main-scroll" href="#contacts">Связаться со мной</a><a class="block-btn block-btn--white block-btn--mobile-offset" href="https://github.com" target="_blank">Смотреть github</a></div>
 				</article>
 			</div>
 		</section>
@@ -219,16 +219,19 @@
 					<li class="section-contacts__item"><a href="mailto:doyoulikeorigami@gmail.com">doyoulikeorigami@gmail.com</a></li>
 					<li class="section-contacts__item"><a href="https://vk.com/origami_biz" target="_blank">vk.com/origami_biz</a></li>
 				</ul>
-				<form class="block-form" method="post" action="/get-rezume.php">
-					<p class="block-form__cta">	Получите моё резюме на e-mail</p>
-					<input class="block-form__input" type="email" name="email" required placeholder="Введите e-mail">
-					<button class="block-btn block-btn--akcent" type="submit">Получить резюме</button>
-				</form>
+				<div class="block-section__cta">
+					<p>Получите моё резюме в PDF формате</p><a class="block-btn block-btn--akcent" href="#" target="_blank">Получить резюме</a>
+				</div>
 			</div>
 		</section>
 		<div class="block-project-popup">
 			<div class="block-project-popup__controls">
-				<div class="block-project-popup__wrap"><a class="block-project-popup__controls-link" href="#" target="_blank">Смотреть код на github</a><a class="block-btn block-btn--akcent js--hide-project-popup" href="#">Закрыть проект</a></div>
+				<div class="block-project-popup__wrap"><a class="block-project-popup__controls-link" href="#" target="_blank">Github проекта</a>
+					<div class="no-mobile"><a class="block-btn block-btn--akcent js--hide-project-popup" href="#">Закрыть проект</a></div>
+					<div class="mobile-only">
+						<div class="block-project-popup__controls-close js--hide-project-popup" href="#">&#10060;</div>
+					</div>
+				</div>
 			</div>
 			<iframe class="block-project-popup__iframe" src=""></iframe>
 		</div>
