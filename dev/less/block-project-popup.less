@@ -31,6 +31,11 @@
 		@media @tablet {
 			padding-bottom: 60px;
 		}
+
+		@media @mobile {
+			padding-top: 42px;
+			padding-bottom: 0;
+		}
 	}
 
 	&__controls {
@@ -48,11 +53,26 @@
 		box-shadow: 0 -3px 10px 0 rgba(0, 0, 0,.0785);
 
 		z-index: 1;
+
+		@media @mobile {
+			padding: 10px 0;
+
+			bottom: auto;
+			top: 0;
+
+			box-shadow: 0 3px 10px 0 rgba(0, 0, 0,.0785);
+		}
 	}
 
 	&__controls-link {
 		text-decoration: underline;
 		color: @altAkcentColor;
+	}
+
+	&__controls-close {
+		.middle-text;
+		text-decoration: none;
+		color: @textColor;
 	}
 
 	&__wrap {

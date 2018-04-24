@@ -33,3 +33,17 @@ input {
 a {
 	color: @altAkcentColor;
 }
+
+.mobile-only {
+	display: none;
+
+	@media @mobile {
+		display: block;
+	}
+}
+
+.no-mobile {
+	@media @mobile {
+		display: none;
+	}
+}

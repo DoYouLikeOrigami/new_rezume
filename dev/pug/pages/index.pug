@@ -32,6 +32,7 @@ block main-content
 
 	section.main-screen
 		.main-screen__img
+			canvas#demo(width="512" height="512")
 
 		.main-screen__wrap
 			article.main-screen__info
@@ -45,7 +46,7 @@ block main-content
 					a.block-btn.block-btn--akcent.js--main-scroll(href="#contacts")
 						| Связаться со мной
 
-					a.block-btn.block-btn--white(href="https://github.com" target="_blank")
+					a.block-btn.block-btn--white.block-btn--mobile-offset(href="https://github.com" target="_blank")
 						| Смотреть github
 	
 
@@ -266,20 +267,21 @@ block main-content
 				li.section-contacts__item
 					a(href="https://vk.com/origami_biz" target="_blank") vk.com/origami_biz
 
-			form.block-form(method="post" action="/get-rezume.php")
-				p.block-form__cta
-					|	Получите моё резюме на e-mail
-					
-				input.block-form__input(type="email" name="email" required placeholder="Введите e-mail")
-				button.block-btn.block-btn--akcent(type="submit") Получить резюме
+			.block-section__cta
+				p Получите моё резюме в PDF формате
+				a.block-btn.block-btn--akcent(href="#" target="_blank") Получить резюме
 
 	.block-project-popup
 		.block-project-popup__controls
 			.block-project-popup__wrap
 				a.block-project-popup__controls-link(href="#" target="_blank")
-					| Смотреть код на github
-				a.block-btn.block-btn--akcent.js--hide-project-popup(href="#")
-					| Закрыть проект
+					| Github проекта
+				.no-mobile
+					a.block-btn.block-btn--akcent.js--hide-project-popup(href="#")
+						| Закрыть проект
+				.mobile-only
+					.block-project-popup__controls-close.js--hide-project-popup(href="#")
+						| &#10060;
 
 		iframe.block-project-popup__iframe(src="")
 		
