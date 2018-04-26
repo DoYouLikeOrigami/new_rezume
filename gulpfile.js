@@ -42,6 +42,7 @@ var
     js: {
     	files: './dev/js/modules/*.js',
     	libs: './dev/js/libs/*.js',
+      game: './dev/js/game/*.js',
     	run: './dev/js/run.js',
     	watch: ['./dev/js/**/*.js'],
     	convertFolder: './deploy/js'
@@ -85,7 +86,7 @@ gulp.task('pug', function() {
 
 /* --------- js --------- */
 gulp.task('js', function() {
-  gulp.src([paths.js.libs, paths.js.files, paths.js.run])
+  gulp.src([paths.js.libs, paths.js.files, paths.js.game, paths.js.run])
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.js.convertFolder));
